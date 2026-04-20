@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Detalhes da Cidade</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">ID:</dt>
+                    <dd class="col-sm-8">{{ object.id }}</dd>
+
+                    <dt class="col-sm-4">Nome:</dt>
+                    <dd class="col-sm-8">{{ object.nome }}</dd>
+
+                    <dt class="col-sm-4">Estado (UF):</dt>
+                    <dd class="col-sm-8">{{ object.estado }}</dd>
+                </dl>
+                <hr>
+                <div class="d-flex gap-2">
+                    <a href="{% url 'cidade-update' object.pk %}" class="btn btn-warning text-white">Editar</a>
+                    <a href="{% url 'cidade-list' %}" class="btn btn-outline-secondary">Voltar para Lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

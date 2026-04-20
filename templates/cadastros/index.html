@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 border">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Bem-vindo ao Sistema de Cadastros</h1>
+        <p class="col-md-8 fs-4 mx-auto">Este é um projeto exemplo implementando CRUD completo para a classe Cidade utilizando Django.</p>
+        <hr class="my-4">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'cidade-list' %}" class="btn btn-primary btn-lg px-4 gap-3">Ver Cidades</a>
+            <a href="{% url 'cidade-create' %}" class="btn btn-outline-secondary btn-lg px-4">Cadastrar Nova</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
